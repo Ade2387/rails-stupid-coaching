@@ -5,10 +5,18 @@
 
   <body>
     <h1>Stupid Coaching</h1>
-    <%= @question %>
-    <p><em>-You</em></p>
-    <%= @message_display %>
-    <p><em>-Your coach</em></p>
-    <%= link_to 'Ask a new question', '/ask' %>
+    <div class=you>
+      <%= @question %>
+      <p><em>-You</em></p>
+    </div>
+    <br>
+    <div class=coach>
+      <%= @message_display %>
+      <p><em>-Your coach</em></p>
+    </div>
+    <br>
+    <div class=link>
+      <%= link_to 'Ask a new question', '/ask' %>
+    </div>
   </body>
 </html>
