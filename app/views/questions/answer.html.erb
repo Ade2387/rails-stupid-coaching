@@ -4,7 +4,11 @@
   </head>
 
   <body>
-  <h1>Hello! in answer</h1>
-  <%= params[:question] %>
+    <h1>Stupid Coaching</h1>
+    <%= @question %>
+    <p><em>-You</em></p>
+    <%= @message_display %>
+    <p><em>-Your coach</em></p>
+    <%= link_to 'Ask a new question', '/ask' %>
   </body>
 </html>

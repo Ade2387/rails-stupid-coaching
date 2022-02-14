@@ -3,6 +3,22 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    @question
+    @question = params[:question]
+    @message_display =
+      # if @question == 'I am going to work'
+      #   p 'Great!'
+      # elsif @question.include?('?')
+      #   p 'Silly question, get dressed and got to work!'
+      # else
+      #   p "I don't care, get dressed and go to work!"
+      # end
+      case @question
+      when 'I am going to work'
+        'Great!'
+      when @question.include?('?')
+        'Silly question, get dressed and go to work!'
+      else
+        "I don't care, get dressed and go to work!"
+      end
   end
 end
